@@ -21,8 +21,7 @@ namespace LogInspect
             {
                 modifierSyntaxValid = CheckModifierSyntaxValid( commandSegments[1..] );
             }
-            if ( modifierSyntaxValid == false ) { 
-                return false; }
+            if ( modifierSyntaxValid == false ) { return false; }
             return true;
         }
         private bool CheckCommandSyntaxValid(string commandSegment, bool isAction=false )
@@ -50,10 +49,7 @@ namespace LogInspect
         {
             foreach ( string modifierSegment in modifierSegments )
             {
-                if ( false == CheckCommandSyntaxValid( modifierSegment ) )
-                {
-                    return false;
-                }
+                if ( false == CheckCommandSyntaxValid( modifierSegment ) ) { return false; }
             }
             return true;
         }

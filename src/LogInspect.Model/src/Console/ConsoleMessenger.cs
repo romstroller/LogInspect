@@ -25,7 +25,7 @@ namespace LogInspect
         }
         public void WarnBadSyntax(string commandSegment)
         {
-            Console.WriteLine( $"Input was not in form of [ ACTION:VALUE ]: [ {commandSegment} ]" );
+            Console.WriteLine( $"Input [ {commandSegment} ] was not in form of ACTION:VALUE" );
         }
         public void WarnNoLogs( string logPath )
         {
