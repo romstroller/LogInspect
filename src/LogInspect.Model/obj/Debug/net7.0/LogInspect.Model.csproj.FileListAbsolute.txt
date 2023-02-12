@@ -1,0 +1,12 @@
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\bin\Debug\net7.0\LogInspect.Model.deps.json
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\bin\Debug\net7.0\LogInspect.Model.dll
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\bin\Debug\net7.0\LogInspect.Model.pdb
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.csproj.AssemblyReference.cache
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.AssemblyInfoInputs.cache
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.AssemblyInfo.cs
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.csproj.CoreCompileInputs.cache
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.dll
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\refint\LogInspect.Model.dll
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\LogInspect.Model.pdb
+C:\Users\romstroller\RSTR\Loginspect_0211\src\LogInspect.Model\obj\Debug\net7.0\ref\LogInspect.Model.dll

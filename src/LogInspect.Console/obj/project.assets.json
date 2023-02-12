@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "LogInspect.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/LogInspect.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogInspect.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LogInspect.Model/1.0.0": {
+      "type": "project",
+      "path": "../LogInspect.Model/LogInspect.Model.csproj",
+      "msbuildProject": "../LogInspect.Model/LogInspect.Model.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "LogInspect.Model >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\romstroller\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj",
+      "projectName": "LogInspect.Console",
+      "projectPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj",
+      "packagesPath": "C:\\Users\\romstroller\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\romstroller\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Model\\LogInspect.Model.csproj": {
+              "projectPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Model\\LogInspect.Model.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

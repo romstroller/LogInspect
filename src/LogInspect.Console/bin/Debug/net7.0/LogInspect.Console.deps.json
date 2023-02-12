@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "LogInspect.Console/1.0.0": {
+        "dependencies": {
+          "LogInspect.Model": "1.0.0"
+        },
+        "runtime": {
+          "LogInspect.Console.dll": {}
+        }
+      },
+      "LogInspect.Model/1.0.0": {
+        "runtime": {
+          "LogInspect.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LogInspect.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LogInspect.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
