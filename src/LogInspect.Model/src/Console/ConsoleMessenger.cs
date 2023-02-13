@@ -10,7 +10,8 @@ namespace LogInspect
             PrintBreak();
             if ( description != null ) Console.WriteLine( $"{description}\n" );
             if ( results == null ) { Console.WriteLine( "Results were null" ); }
-            else {
+            else 
+            {
                 foreach ( string[] result in results )
                 {
                     Console.WriteLine( string.Join( " | ", result ) );
@@ -37,7 +38,7 @@ namespace LogInspect
         }
         public void WarnQueryFailure(string input)
         {
-            Console.WriteLine( $"Query from input [ {input} ] was unsuccessful" );
+            Console.WriteLine( $"Query from input [ {input} ] returned no results" );
         }
     }
 }

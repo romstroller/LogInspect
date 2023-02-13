@@ -15,7 +15,7 @@ namespace LogInspect
             newLog.timezone = segments[4][..^1];
             newLog.method = segments[5][1..];
             newLog.url = segments[6];
-            newLog.protocol = segments[7];
+            newLog.protocol = segments[7][..^1];
             newLog.status = Int32.Parse(segments[8]);
             newLog.bytes = Int32.Parse(segments[9]);
             newLog.unknown = segments[10];

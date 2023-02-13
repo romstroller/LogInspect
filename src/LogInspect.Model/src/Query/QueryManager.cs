@@ -32,22 +32,22 @@ namespace LogInspect
         {
             foreach ( string[] whereStatement in whereStatements )
             {
-                string whereFeature = whereStatement[0];
+                string queryFeature = whereStatement[0];
                 string queryValue = whereStatement[1];
                 
-                System.Reflection.PropertyInfo? wherePropInfo = typeof(Log)
-                    .GetProperty( whereFeature );
+                System.Reflection.PropertyInfo? featurePropInfo = typeof(Log)
+                    .GetProperty( queryFeature );
                 
-                // no matching property for "where" feature, ignore (add warning)
-                if ( wherePropInfo == null ) {  continue;  }
+                // no matching property for "where" feature, ret empty (add warning)
+                if ( featurePropInfo == null ) { return new List<Log>();  }
                 
                 // if valueObj not null, get tuple of log and its valueObj for prop
-                List<(Log, object)> whereValueObjs = (from log in logs
-                    where wherePropInfo.GetValue( log ) != null
-                    select ( log, wherePropInfo.GetValue( log ))).ToList();
+                List<(Log, object)> propValueObjs = (from log in logs
+                    where featurePropInfo.GetValue( log ) != null
+                    select ( log, featurePropInfo.GetValue( log ))).ToList();
                 
-                // take log if property value is match to query-value
-                logs = (from tup in whereValueObjs
+                // take as logs if property value is match to query-value
+                logs = (from tup in propValueObjs
                     where tup.Item2.ToString() == queryValue
                     select tup.Item1).ToList();
             }
@@ -73,6 +73,8 @@ namespace LogInspect
         public List<string[]>? GetList(ListQuery query, List<Log> logs, bool ignoreLimit = false)
         {
             if ( query.Where.Count > 0 ) { logs = ApplyWhereStatements( query.Where, logs );}
+            if ( logs.Count() == 0 ) { return null; }
+            
             List<string[]>? results = GetStringsFromQueryProperty( query, logs );
             if ( results == null ){ return null; }
             if ( query.Limit != null )
@@ -116,7 +118,7 @@ namespace LogInspect
                 .OrderByDescending(arr => arr[1])
                 .ToList();
             
-            List<string[]> results =  HandleNull( resultsNbl );
+            List<string[]> results = HandleNull( resultsNbl );
             if ( query.Limit != null ){ results =  ApplyLimit( query.Limit.Value, results ); }
             return results;
         }
