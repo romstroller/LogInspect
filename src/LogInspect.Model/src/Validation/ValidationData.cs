@@ -18,18 +18,18 @@ namespace LogInspect
         public static readonly List<string[]> Guide = new List<string[]>
         {
             new string[] { "A query takes the form of an ACTION, a FEATURE and optional MODIFIERS", },
-            new string[] { "    in the form of action:feature~modifier:value ", },
+            new string[] { "    in the form of action:feature~modifier:statement ", },
             new string[] { "", },
             new string[] { "ACTIONS:", },
-            new string[] { "- list    get all values for a feature, eg list:url", },
-            new string[] { "- count   count different values for a feature, eg count:timezone", },
-            new string[] { "- help    help:features for available features, or this guide help:guide", },
+            new string[] { "  list    - get all values for a feature, eg list:url", },
+            new string[] { "  count   - count different values for a feature, eg count:timezone", },
+            new string[] { "  help    - help:features for available features, or this guide help:guide", },
             new string[] { "", },
             new string[] { "MODIFIERS can be appended with '~' separator", },
-            new string[] { "- where   to set equality condition '=' on another feature", },
+            new string[] { "  where   - set equality condition '=' on another feature", },
             new string[] { "              eg. list:useragent~where:protocol=HTTP/1.1", },
             new string[] { "              or  list:clientip~where:userid=admin", },
-            new string[] { "- limit   show only the first n. results (eg. count:useragent~limit:10 )" },
+            new string[] { "  limit   - show only the first n. results (eg. count:useragent~limit:10 )" },
             };
     }
 }

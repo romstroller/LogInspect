@@ -21,20 +21,17 @@ namespace LogInspect
         }
         public string? PromptInput()
         {
-            Console.WriteLine( "Provide log query, 'help:guide' for query guide or leave blank to exit" );
+            Console.WriteLine( "Provide log query, 'help:guide' for query guide, leave blank to exit" );
             return Console.ReadLine();
-        }
-        public void WarnBadSyntax(string commandSegment)
-        {
-            Console.WriteLine( $"Input [ {commandSegment} ] was not in form of ACTION:VALUE" );
         }
         public void WarnNoLogs( string logPath )
         {
             Console.WriteLine( $"No log file located at [ {logPath} ] - please check" );
         }
-        public void WarnCommandInvalid( string commandSegment )
+        public void WarnCommandInvalid( string? commandSegment )
         {
-            Console.WriteLine( $"[ {commandSegment} ] is not a valid command" );
+            if ( string.IsNullOrWhiteSpace(commandSegment) ) Console.WriteLine( $"No command from input" );
+            else{ Console.WriteLine( $"[ {commandSegment} ] is not command or command syntax" ); }
         }
         public void WarnQueryFailure(string input)
         {

@@ -23,6 +23,7 @@ namespace LogInspect
             string? input = string.Join( " ", args );
             if ( false == InputValidator.CheckInputIsQuerySyntax( input.ToLower() ) ) 
             {
+                ConsoleMessenger.WarnCommandInvalid( input );
                 input = ConsoleMessenger.PromptInput(); 
             }
             RunPromptLoop( input );
@@ -37,13 +38,15 @@ namespace LogInspect
                     Query? query = QueryParser.TryParseQuery( input );
                     if ( query == null )
                     { 
-                        ConsoleMessenger.WarnBadSyntax( input); 
+                        ConsoleMessenger.WarnCommandInvalid( input); 
                         return;
                     }
                     List<string[]>? results = QueryManager.ExecuteQuery( query );
                     if ( results == null ){ ConsoleMessenger.WarnQueryFailure( input ); }
                     else { ConsoleMessenger.OutputResults( results ); }
                 }
+                else { ConsoleMessenger.WarnCommandInvalid( input);  }
+                
                 input = ConsoleMessenger.PromptInput();
             }
         }

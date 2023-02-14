@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             IConsoleMessenger consoleMessenger = new ConsoleMessenger();
-            IInputValidator inputValidator = new InputValidator( consoleMessenger );
+            IInputValidator inputValidator = new InputValidator( );
             ILogParser logParser = new LogParser();
             ILogsManager logsManager = new LogsManager( "example-data.log", logParser );
             
@@ -29,11 +29,13 @@
             
             // List Urls returning a 404
             List<string[]>? urlWhereStatus404 = queryManager.ExecuteQuery( 
-                new ListQuery( "url" ) { Where = new List<string[]>{ new string[]{ "status", "404" } } });
+                new ListQuery( "url" ) { 
+                    Where = new List<string[]>{ 
+                        new string[]{ "status", "404" } } });
             
             consoleMessenger.OutputResults( top5Urls, "Top 5 visited urls" );
-            consoleMessenger.OutputResults( top5methods, "Top 5 request types (i.e. GET, POST)" );
-            consoleMessenger.OutputResults( urlWhereStatus404, "List Urls returning a 404" );
+            consoleMessenger.OutputResults( top5methods, "Top 5 request types " );
+            consoleMessenger.OutputResults( urlWhereStatus404, "List Urls returning 404" );
             
             consoleWorker.StartFromArgs(args);
         }

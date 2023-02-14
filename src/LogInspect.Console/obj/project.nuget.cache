@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EHOecfjDEL+xULHR3d611HEgMvv6Y/W1RA+smAbfeg8xuEfgGORn7nh14YCg5ntoxFhS1A4yCRAIJhhPEYj9YA==",
+  "dgSpecHash": "5y99OPWu0AjSBJxn2vFYa6sKZ0TkRqiRctPUvJH8t1FreDQl2P2niGobTYdgrGuvBMqnbQwllu5I4VzWiOs7kQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj",
+  "projectFilePath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Console\\LogInspect.Console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

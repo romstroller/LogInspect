@@ -2,11 +2,6 @@ namespace LogInspect
 {
     public class InputValidator : IInputValidator
     {
-        IConsoleMessenger ConsoleMessenger;
-        public InputValidator( IConsoleMessenger consoleMessenger )
-        {
-            this.ConsoleMessenger = consoleMessenger;
-        }
         public bool CheckInputIsQuerySyntax(string? input)
         {
             if (string.IsNullOrWhiteSpace(input)) { return false; }
@@ -26,24 +21,11 @@ namespace LogInspect
         }
         private bool CheckCommandSyntaxValid(string commandSegment, bool isAction=false )
         {
-            string[] command = commandSegment.Split(":");
-            if (command.Length != 2)
-            {
-                ConsoleMessenger.WarnBadSyntax( commandSegment );
-                return false; 
-            }
-            string commandInstruction = command[0];
-            string commandValue = command[1];
-            bool isValidValue = true;
+            string[] commandSegments = commandSegment.Split(":");
+            if (commandSegments.Length != 2) {return false; }
             var commandSet = isAction ? ValidationData.Actions : ValidationData.Modifiers;
-            
-            try { isValidValue = commandSet[ commandInstruction ]( commandValue ); }
-            catch ( KeyNotFoundException )
-            {
-                ConsoleMessenger.WarnCommandInvalid( commandSegment );
-                return false;
-            }
-            return isValidValue;
+            try { return commandSet[ commandSegments[0] ]( commandSegments[1] ); }
+            catch ( KeyNotFoundException ) { return false; }
         }
         private bool CheckModifierSyntaxValid(string[] modifierSegments)
         {

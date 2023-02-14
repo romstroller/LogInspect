@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj": {}
+    "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Console\\LogInspect.Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj": {
+    "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Console\\LogInspect.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj",
+        "projectUniqueName": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Console\\LogInspect.Console.csproj",
         "projectName": "LogInspect.Console",
-        "projectPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\LogInspect.Console.csproj",
+        "projectPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Console\\LogInspect.Console.csproj",
         "packagesPath": "C:\\Users\\romstroller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\loginspect.console\\obj\\",
+        "outputPath": "C:\\Users\\romstroller\\RSTR\\LogInspect_0211\\src\\LogInspect.Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\romstroller\\AppData\\Roaming\\NuGet\\NuGet.Config"
